@@ -1,0 +1,16 @@
+{
+	"clientName": "string",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}

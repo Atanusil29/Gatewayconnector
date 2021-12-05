@@ -1,0 +1,24 @@
+<Property title="Workflow Pending Folder" visible="1">
+    <Initial></Initial>
+    <ToolTip>Folder where workflow notifications details are written to pending completion</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="External Job Completion" visible="1">
+    <Initial>False</Initial>
+    <ToolTip>If selected then communication server will wait for a job completion before update job status.
+    </ToolTip>
+    <Control>
+        <List editable="0">
+            <Line acctual="False">False</Line>
+            <Line acctual="True">True</Line>
+        </List>
+    </Control>
+</Property>
+<Property title="__delaycompletionprop__" visible="0">
+    <Initial>External Job Completion=True</Initial>
+    <Control>
+        <String/>
+    </Control>
+</Property>

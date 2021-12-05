@@ -1,0 +1,36 @@
+{
+	"result": {
+		"selectionReference": "string",
+		"eventList": [
+			{
+				"clientName": "string",
+				"event": {
+					"kind": "WAITING|DELIVERED|UNDELIVERABLE|CANCELLED|OPENED|READ|DELETED|CLICKED|REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL|SMS|PNS|RCS",
+				"tag": [
+					{
+						"name": "string",
+						"value": "string"
+					}
+				],
+				"message": {
+					"sender": "string",
+					"recipient": [
+						"string"
+					],
+					"subject": "string",
+					"file": [
+						{
+							"name": "string",
+							"content": "YmFzZS02NCBlbmNvZGVkIHN0cmluZw=="
+						}
+					]
+				},
+				"click": "string"
+			}
+		]
+	}
+}

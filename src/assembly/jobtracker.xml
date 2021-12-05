@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">
+	<id>jobtracker</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<files>
+		<file>
+			<source>src/main/resources/logback-jobtracker.xml</source>
+			<outputDirectory>etc</outputDirectory>
+			<destName>logback.xml</destName>
+		</file>
+	</files>
+	<fileSets>
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>etc</outputDirectory>
+			<includes>
+				<include>*.properties</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/appassembler/bin</directory>
+			<excludes>
+				<exclude>*.bat</exclude>
+			</excludes>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/appassembler/bin</directory>
+			<includes>
+				<include>*.bat</include>
+			</includes>
+			<outputDirectory>bin</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/appassembler</directory>
+			<outputDirectory>.</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<!-- include dependency jar files to distribution -->
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<unpack>false</unpack>
+			<scope>provided</scope>
+		</dependencySet>
+	</dependencySets>
+</assembly>

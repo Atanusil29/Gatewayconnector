@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification>
+<UUID>c2c6a995-3d72-4356-92e2-5be73a2cb9e2</UUID>
+<eventTime>2021-03-02T19:14:42.427Z</eventTime>
+<WorkflowStarted>Yes</WorkflowStarted>
+<ChannelSelected>Yes</ChannelSelected>
+<workflowID>c2c6a995-3d72-4356-92e2-5be73a2cb9e2</workflowID>
+
+<trackerid>5250AAE4-BA0A-744E-B210-2F1ABAE61B7F</trackerid>
+<step>MESSAGE_GENERATED</step>
+<stepTime>2021-03-02T20:14:42.653+0200</stepTime>
+
+<qualifier>1</qualifier>
+<messageId>35BD2ECA-59FD-8242-8A5F-47F87D383D40</messageId>
+<fileName>/cdcp/Projects/PXS_Training/Output/SER_MyPxApp_SMS_c2c6a995-3d72-4356-92e2-5be73a2cb9e2_20210302_201442.txt</fileName>
+<channelName>SMS</channelName>
+<sender>+32476896049</sender>
+<role>, SENT_TO_PRIMARY, SUBMITTED_BY</role>
+<email_subject></email_subject>
+<squenceNumber>1</squenceNumber>
+<smsto>+0032477596196</smsto>
+<role></role>
+<attachments>,</attachments>
+<SMSBody>Cher client Proximus, comme convenu, nous vous envoyons le lien vers l’app MyProximus : https://www.proximus.be/allsports. À bientôt !</SMSBody>
+<EmailPrimary></EmailPrimary>
+<EmailTo></EmailTo>
+<EmailCC></EmailCC>
+<EmailBCC></EmailBCC>
+<EmailFrom></EmailFrom>
+<communicationTemplates>SER_MyPxApp_SMS</communicationTemplates>
+<smsreferencePrimary>UUID1234</smsreferencePrimary>
+<sms_from>+32476896049</sms_from>
+<Consumer_Name>CVM</Consumer_Name>
+<event_Type>Workflow</event_Type>
+</notification>

@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b8c42eec-7681-4d9a-a205-9093892e41b0" activeEnvironment="Default" name="CDCG API Sample" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="dfac2b3b-9a6c-4ba8-b48c-f12c742a6839" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080/gateway-mock-server" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint></con:endpoints><con:resource name="SendMessage" path="/v1/cdcgSendMessage" id="c6d78994-5edc-4c15-aca2-6ca067126b73"><con:settings/><con:parameters/><con:method name="SendMessage POST" id="4dad52a3-1e3c-4b4d-a61e-741d26c233d7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 401 502 504</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Sample Request" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName": "string",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_200" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_200",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_400" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_400",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_401" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_401",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_502" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_502",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_504" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_504",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_404" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_404",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "base-64 encoded string"
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}</con:request><con:originalUri>http://localhost/cdcg/sendMessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="FetchEvents" path="/v1/cdcgFetchEvents" id="c6d78994-5edc-4c15-aca2-6ca067126b73"><con:settings/><con:parameters/><con:method name="FetchEvent POST" id="4dad52a3-1e3c-4b4d-a61e-741d26c233d7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:xht="http://www.w3.org/1999/xhtml">xht:html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:fet="http://localhost/cdcg/fetchEvents">fet:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 401 404 502 504</con:status><con:params/></con:representation><con:request name="Sample Request" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName": "string",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_200" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_200",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_400" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_400",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_401" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_401",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_404" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_404",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_502" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_502",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="TEST_504" id="1c650990-25c9-4475-8446-9962004fa24e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/gateway-mock-server</con:endpoint><con:request>{
+	"clientName":"TEST_504",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"selectionReference": "string",
+	"selectionPeriod": {
+		"startTimestamp": "2021-01-01T00:00:00",
+		"endTimestamp": "2021-12-31T23:59:59"
+	},
+	"tag": [
+		{
+			"name": "string",
+			"value": "string"
+		}
+	],
+	"eventPageSize": 256
+}</con:request><con:originalUri>http://localhost/cdcg/fetchEvents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="662081be-0c43-4608-92e6-ec67d1204f6f" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Dev" path="/otdsws/rest/authentication/credentials" id="54b0ce02-aa3a-456e-8353-d7935e20d46f"><con:settings/><con:parameters/><con:method name="Dev 1" id="bc53421a-add3-4c03-91e1-84d819309c9f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cred="http://localhost/otdsws/v1/authentication/credentials">cred:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:cred="http://localhost/otdsws/v1/authentication/credentials">cred:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Valid" id="16e5c7d9-924b-44aa-8139-a39c7d0c6269" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+    "userName": "tenantadmin",
+    "password": "strs"
+}</con:request><con:originalUri>http://localhost/otdsws/v1/authentication/credentials</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Invalid" id="16e5c7d9-924b-44aa-8139-a39c7d0c6269" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+    "user_name": "invalid",
+    "password": "strs"
+}</con:request><con:originalUri>http://localhost/otdsws/v1/authentication/credentials</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="/dev/dev/v1/documents" id="d6194800-119c-4de3-8a76-80b51710f1e8" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="73655017-5271-4fea-ae59-4671e712e29d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="OTDSTicket" value="[*OTDSSSO*BrowserTicket]" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="documents" path="/dev/dev/v1/documents" id="7e52f96a-daab-49fd-80a4-7d73d2ac71cc"><con:settings/><con:parameters/><con:method name="Method 1" id="961e31a2-ac02-45a6-a121-ed6f7dae9305" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:doc="http://localhost/dev/dev/v1/documents">doc:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:doc="http://localhost/dev/dev/v1/documents">doc:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="SampleRequest" id="87edf9d2-2c7e-420f-8770-658ec7edb06c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="OTDSTicket" value="OTDSSSO*AdminTicket" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/dev/dev/v1/documents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="SampleInvalid" id="87edf9d2-2c7e-420f-8770-658ec7edb06c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="OTDSTicket" value="OTDSSSO*BrowserTicket" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/dev/dev/v1/documents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:restMockService id="b06bc190-416c-4d4c-a0e4-902480546197" port="8080" path="/gateway-mock-server" host="localhost" name="REST MockService" docroot=""><con:settings/><con:properties/><con:restMockAction name="/v1/cdcgFetchEvents" method="POST" resourcePath="/v1/cdcgFetchEvents" id="5cc83c2f-7872-41aa-8067-d4851718957b"><con:settings/><con:defaultResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sample Response</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+*/
+
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("clientName\":\"TEST_200\"") ){
+    return "Success Response 200"
+}
+if( requestBody.contains("clientName\":\"TEST_400\"") ){
+    return "Error Response 400"
+}
+if( requestBody.contains("clientName\":\"TEST_401\"") ){
+    return "Error Response 401"
+}
+if( requestBody.contains("clientName\":\"TEST_403\"") ){
+    return "Error Response 403"
+}
+if( requestBody.contains("clientName\":\"TEST_404\"") ){
+    return "Error Response 404"
+}
+if( requestBody.contains("clientName\":\"TEST_502\"") ){
+    return "Error Response 502"
+}
+if( requestBody.contains("clientName\":\"TEST_504\"") ){
+    return "Error Response 504"
+}
+
+if( requestBody.contains("clientName\":\"EMAIL\"") ){
+	if( requestBody.contains("\"selectionPeriod\"") ){
+		return "Email Page 1"
+	}
+	if( requestBody.contains("\"selectionReference\"") ){
+		return "Email Page 2"
+	}
+    return "Error Response 400"
+}
+
+if( requestBody.contains("clientName\":\"OpenText\"") ){
+  if( requestBody.contains("channelName\":\"EMAIL\"") ){
+	if( requestBody.contains("\"selectionPeriod\"") ){
+		return "Email Page 1"
+	}
+	if( requestBody.contains("\"selectionReference\"") ){
+		return "Email Page 2"
+	}
+    return "Error Response 400"
+  }
+  if( requestBody.contains("channelName\":\"SMS\"") ){
+	if( requestBody.contains("\"selectionPeriod\"") ){
+		return "SMS Page 1"
+	}
+	if( requestBody.contains("\"selectionReference\"") ){
+		return "SMS Page 2"
+	}
+    return "Error Response 400"
+  }
+}
+
+</con:dispatchPath><con:response name="Sample Response" id="8d38b566-20e4-4fed-b2a2-88decf59d016" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"selectionReference": "string",
+		"eventList": [
+			{
+				"clientName": "string",
+				"event": {
+					"kind": "WAITING|DELIVERED|UNDELIVERABLE|CANCELLED|OPENED|READ|DELETED|CLICKED|REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL|SMS|PNS|RCS",
+				"tag": [
+					{
+						"name": "string",
+						"value": "string"
+					}
+				],
+				"message": {
+					"sender": "string",
+					"recipient": [
+						"string"
+					],
+					"subject": "string",
+					"file": [
+						{
+							"name": "string",
+							"content": "base-64 encoded string"
+						}
+					]
+				},
+				"click": "string"
+			}
+		]
+	}
+}</con:responseContent></con:response><con:response name="Success Response 200" id="d6a55f2d-161d-4129-9dbc-0b9c52bb2699" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"selectionReference": "string",
+		"eventList": [
+			{
+				"clientName": "TEST_200",
+				"event": {
+					"kind": "WAITING|DELIVERED|UNDELIVERABLE|CANCELLED|OPENED|READ|DELETED|CLICKED|REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL|SMS|PNS|RCS",
+				"tag": [
+					{
+						"name": "string",
+						"value": "string"
+					}
+				],
+				"message": {
+					"sender": "string",
+					"recipient": [
+						"string"
+					],
+					"subject": "string",
+					"file": [
+						{
+							"name": "string",
+							"content": "base-64 encoded string"
+						}
+					]
+				},
+				"click": "string"
+			}
+		]
+	}
+}</con:responseContent></con:response><con:response name="Error Response 400" id="8331529f-7314-46d4-a68f-e255e8d170ab" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 401" id="66e7f828-4834-4408-afc6-b6095eba4f5e" httpResponseStatus="401" mediaType="application/json"><con:settings/><con:responseContent>{"status":"fail"}</con:responseContent></con:response><con:response name="Error Response 404" id="03b13254-78f0-46d0-9ea0-703bf2cab97d" httpResponseStatus="404" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 502" id="48daf32d-8d9b-4784-8cc2-24298c7dfbdd" httpResponseStatus="502" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 504" id="41cf9458-fed7-4b55-8a49-6628e47db9c0" httpResponseStatus="504" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 403" id="751fd18e-425e-40d3-a07c-d42e5772dbf4" httpResponseStatus="403" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Email Page 1" id="38c7d51b-63ed-4340-b26e-b1eaab85eada" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"selectionReference": "mockreference",
+		"eventList": [
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "WAITING",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "DELIVERED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "partId",	"value": "1111-delivered" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "UNDELIVERABLE",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "partId",	"value": "2222-undelivered" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "CANCELLED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "OPENED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "READ",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "DELETED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "CLICKED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			}
+		]
+	}
+}</con:responseContent></con:response><con:response name="Email Page 2" id="6fe1ae7f-76bb-48e1-8079-74b82dec7b64" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"eventList": [
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "WAITING",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "DELIVERED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "partId",	"value": "1111-delivered" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "UNDELIVERABLE",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "partId",	"value": "2222-undelivered" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "CANCELLED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "OPENED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "READ",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "DELETED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "CLICKED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "EMAIL",
+				"event": {
+					"kind": "REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "EMAIL",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			}
+		]
+	}
+}</con:responseContent></con:response><con:response name="SMS Page 1" id="0f582f92-b9d1-4eb1-9b06-042ff323da84" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"selectionReference": "mockreference",
+		"eventList": [
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "WAITING",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "DELIVERED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "partId",	"value": "1111-delivered" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "UNDELIVERABLE",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "partId",	"value": "2222-undelivered" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "CANCELLED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "OPENED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "READ",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "DELETED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "CLICKED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			}
+		]
+	}
+}</con:responseContent></con:response><con:response name="SMS Page 2" id="6b8b0c92-154d-419d-8db9-87c90f7a1581" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+	"result": {
+		"eventList": [
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "WAITING",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "DELIVERED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "partId",	"value": "1111-delivered" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "UNDELIVERABLE",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "partId",	"value": "2222-undelivered" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "CANCELLED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "OPENED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "READ",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "DELETED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "CLICKED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			},
+			{
+				"clientName": "SMS",
+				"event": {
+					"kind": "REPLIED",
+					"timestamp": "2021-01-01T00:00:00",
+					"qualifier": "string"
+				},
+				"channelName": "SMS",
+				"tag": [
+					{ "name": "string",	"value": "string" }
+				]
+			}
+		]
+	}
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v1/cdcgSendMessage" method="POST" resourcePath="/v1/cdcgSendMessage" id="8fe19aa2-5505-42c4-90f7-917fbdcc3d47"><con:settings/><con:defaultResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sample Response</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+*/
+
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("clientName\":\"TEST_200\"") ){
+    return "Success Response 200"
+}
+if( requestBody.contains("clientName\":\"TEST_400\"") ){
+    return "Error Response 400"
+}
+if( requestBody.contains("clientName\":\"TEST_401\"") ){
+    return "Error Response 401"
+}
+if( requestBody.contains("clientName\":\"TEST_404\"") ){
+    return "Error Response 404"
+}
+if( requestBody.contains("clientName\":\"TEST_502\"") ){
+    return "Error Response 502"
+}
+if( requestBody.contains("clientName\":\"TEST_504\"") ){
+    return "Error Response 504"
+}
+
+if( requestBody.contains("invalid.address.com") ){
+    return "Error Response 400"
+}
+
+</con:dispatchPath><con:response name="Sample Response" id="4d05b1fb-c458-4b9e-b2a7-fcbd740ac287" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Success Response 200" id="32bdd047-10d3-4fba-afe7-acf97cf242fb" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 400" id="1bbe679b-67cf-49a7-8f70-1c6a5f4a04c5" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 401" id="3041809e-c55e-44a8-99ae-8354477a95c6" httpResponseStatus="401" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 502" id="a03c7d20-63a4-46a2-839d-5affcb16210b" httpResponseStatus="502" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 504" id="7ac06e92-3b68-4a47-a519-689da85d4d28" httpResponseStatus="504" mediaType="application/json"><con:settings/><con:responseContent/></con:response><con:response name="Error Response 404" id="06f6cbcd-0323-4d50-8392-6096f604ee55" httpResponseStatus="404"><con:settings/><con:responseContent/></con:response></con:restMockAction></con:restMockService><con:restMockService id="006b200e-952d-4299-a79b-f104b28b3eb2" port="8080" path="/" host="localhost" name="REST Mock Exstream" docroot=""><con:settings/><con:properties/><con:restMockAction name="/otdsws/rest/authentication/credentials" method="POST" resourcePath="/otdsws/rest/authentication/credentials" id="f3f64b42-3c86-4591-bfa9-bc0f475c7311"><con:settings/><con:defaultResponse>Success</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("invalid") ){
+    return "Invalid"
+}
+if( requestBody.contains("tenantadmin") ){
+    return "Success"
+}
+if( requestBody.contains("browser") ){
+    return "BrowserTicket"
+}
+return "Invalid"
+
+/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Success" id="8581fed3-cacd-4ed5-9578-652a986e2bea" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "token": "6F7464735F73657373696F6E5F6B6579",
+    "userId": "tenantadmin@strs.role",
+    "ticket": "*OTDSSSO*AZBBQlRpTUh4ajMwbGxLb0Q3OWVFSGFuOE9BOVNRWlFBUUhnMU9lbVY2ZzJBVUZhMDRWREh3elFFQWdiYUtBUmtJRTF0YU1iWTN4a1FaX3ZudUJrWXdPSUdSOWE2d1ZoLXNESmZWaDJHWm5VSGJZZmlZTG1FeFlFaWxZMXZUbmVlMzRHc2FDTWdvakJob0NXckN6c29GbW16eEM4M2ppbDlfZTg1QXE0VTZFcDR4YlRFZkN3bW5SNzJKdUlySy1vWl9IYkJhSGxMOFlNLXcxN3ktWXRxTXZGSHVHM21jV0pFckpTQTZHdVNCd0MwWWd0NjVIT1VDUC02cFhpNmd1c2Z0UXVEWTZha2NRS2pYYnpScHNxTEc5NlU5bUtmaXNsU19PYmNibE0xM2xKTC1Da1ZMMmlUNXdfblp4ODhzQ1RCVk03MFdEbWFBQ1NaQjNubmpaZzNrQjdxdklrZ2dhNXZtZXZuTnFKRUJXaXh0ME1aYlNBOFJpMjduamVkYk5zQ1VDX3NwZUl6SFJyT3lZUSoqAE4ASgAUAhshpW4s5Ii7jdGh99zNAmY5mgAAEELAaG_WWkNkILimfnn7nlMAIEMnylwKzNhDlGODt-V8glffnWgWG58qzrg8tcJ2bSeZAAA*",
+    "resourceID": null,
+    "failureReason": null,
+    "passwordExpirationTime": 0,
+    "continuation": false,
+    "continuationContext": null,
+    "continuationData": null
+}</con:responseContent></con:response><con:response name="Invalid" id="d597d99f-2da3-4206-a2a5-294fa4f6f450" httpResponseStatus="401" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": -805306355,
+    "error": "INVALID_CREDENTIALS",
+    "errorDetails": null
+}</con:responseContent></con:response><con:response name="BrowserTicket" id="022729d5-4116-4f98-b8d3-249e524ab1b6" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "token": "6F7464735F73657373696F6E5F6B6579",
+    "userId": "browser@strs.role",
+    "ticket": "*OTDSSSO*BrowserTicket",
+    "resourceID": null,
+    "failureReason": null,
+    "passwordExpirationTime": 0,
+    "continuation": false,
+    "continuationContext": null,
+    "continuationData": null
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/otdsws/rest/systemconfig/version" method="GET" resourcePath="/otdsws/rest/systemconfig/version" id="1dc631ae-3f40-4ff1-8d8e-1477b84659e7"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Version" id="55f014d0-bb7b-4945-8890-777fdb7af77e" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "productVersion": "16.6.1",
+    "versionSuffix": "",
+    "buildNumber": "16.6.1.2407",
+    "buildDate": "2019-05-27 19:20:07",
+    "platform": "Windows Server 2016",
+    "productVersionAsLong": 160006000001,
+    "hardwareFingerprint": "hGHwa-V7NwJ-jpyN4-GXv3f-XxxS7-Qu3hc-7K+gO-jrSID-+RVdu-wc4a5-NjX8E-UEIs/-TYcT"
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/dev/dev/v1/documents" method="GET" resourcePath="/dev/dev/v1/documents" id="6f399ce6-f8e2-422f-92c7-d757c80f13d5"><con:settings/><con:defaultResponse>SampleDocuments</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+//def requestBody = mockRequest.getRequestContent()
+//log.info "Request body: " + requestBody
+
+def otdsTicket = mockRequest.getRequestHeaders().get("OTDSTicket")
+//log.info "OTDSTicket: " + otdsTicket
+
+if ( otdsTicket == null ){
+	log.info "OTDSTicket: &lt;blank> (unauthorised)"
+	return "Unauthorised"
+}
+if ( otdsTicket[0].contains("BrowserTicket") ){
+	log.info "OTDSTicket: " + otdsTicket[0] + " (unauthorised)"
+	return "Unauthorised"
+}
+
+if ( queryString.contains("%5B%22EQ%22,%22originaltrackerid%22,%223333-error%22%5D") ){
+	return "Documents Tracker 3333-error"
+}
+if ( queryString.contains("%5B%22EQ%22,%22originaltrackerid%22,%225555-error%22%5D") ){
+	return "Documents Tracker 5555-error"
+}
+
+if ( queryString.contains("%5B%22EQ%22,%22processingattemptid%22,%221111-delivered%22%5D") ){
+	return "Document Holding"
+}
+if ( queryString.contains("%5B%22EQ%22,%22processingattemptid%22,%222222-undelivered%22%5D") ){
+	return "Document Holding"
+}
+
+if ( queryString.contains("lastupdatetime") ){
+// Select valid response randomly
+def r = Math.random()
+log.info "select random " + r
+if( r &lt; 0.33 )
+   return "EmptySample"
+else
+   return "SampleDocuments"
+}
+
+
+return "SampleDocuments"
+
+/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Unauthorised" id="4dc73df8-d3a4-484c-b1b8-439ce6c9da09" httpResponseStatus="401" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "fail",
+    "message": "Unauthorized",
+    "reason": "NoSession"
+}</con:responseContent></con:response><con:response name="SampleDocuments" id="82a765a4-f0dd-4187-a039-8bdd2df5e0a4" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent><![CDATA[{
+    "status": "success",
+    "data": [
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzpkYTdkMjU1MS03Zjk0LTcxNGQtYTgwNi04ZDQ1NzUzYTExMzk=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "2",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "785AF451-F143-2940-8050-0DE498B0125A",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.853Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "TestAppRetry",
+            "processingsequencenumber": "1700",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2</v></var><var name=\"$location\"><v>invalid</v></var></vars>",
+            "processingattemptid": "2170B47A-0A4A-E94C-9051-735802EA4937",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1699",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "2",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        },
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzo2MmY4OTNkZS00ZWQ0LWM1NGItYWFjMi1iNjJhMmMxNzkxYjI=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "1",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "DF7125C4-1168-0C41-96BF-20FBE7FB5B47",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.837Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "TestAppRetry",
+            "processingsequencenumber": "1699",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY</v></var><var name=\"$location\"><v>valid</v></var></vars>",
+            "processingattemptid": "84B981DD-ED2C-2146-BB5A-FAD6B44E72B3",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1696",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "1",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        }
+    ]
+}]]></con:responseContent></con:response><con:response name="Documents Tracker 3333-error" id="61f18176-1d35-449e-be8d-59f27c76b099" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent><![CDATA[{
+    "status": "success",
+    "data": [
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzpkYTdkMjU1MS03Zjk0LTcxNGQtYTgwNi04ZDQ1NzUzYTExMzk=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "2",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "785AF451-F143-2940-8050-0DE498B0125A",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.853Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "TestAppRetry",
+            "processingsequencenumber": "1700",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2</v></var><var name=\"$location\"><v>invalid</v></var></vars>",
+            "processingattemptid": "2170B47A-0A4A-E94C-9051-735802EA4937",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1699",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "2",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        },
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzo2MmY4OTNkZS00ZWQ0LWM1NGItYWFjMi1iNjJhMmMxNzkxYjI=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "1",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "DF7125C4-1168-0C41-96BF-20FBE7FB5B47",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.837Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "TestAppRetry",
+            "processingsequencenumber": "1699",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY</v></var><var name=\"$location\"><v>valid</v></var></vars>",
+            "processingattemptid": "84B981DD-ED2C-2146-BB5A-FAD6B44E72B3",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1696",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "1",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        }
+    ]
+}]]></con:responseContent></con:response><con:response name="Documents Tracker 5555-error" id="f2ae6d8d-ff87-49bb-b382-3796f5547067" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent><![CDATA[{
+    "status": "success",
+    "data": [
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzpkYTdkMjU1MS03Zjk0LTcxNGQtYTgwNi04ZDQ1NzUzYTExMzk=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "2",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "785AF451-F143-2940-8050-0DE498B0125A",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.853Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "",
+            "processingsequencenumber": "1700",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2</v></var><var name=\"$location\"><v>invalid</v></var></vars>",
+            "processingattemptid": "2170B47A-0A4A-E94C-9051-735802EA4937",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1699",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "2",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        },
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "6",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzo2MmY4OTNkZS00ZWQ0LWM1NGItYWFjMi1iNjJhMmMxNzkxYjI=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "1",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "DF7125C4-1168-0C41-96BF-20FBE7FB5B47",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.837Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "",
+            "processingsequencenumber": "1699",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY</v></var><var name=\"$location\"><v>valid</v></var></vars>",
+            "processingattemptid": "84B981DD-ED2C-2146-BB5A-FAD6B44E72B3",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1696",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "1",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        }
+    ]
+}]]></con:responseContent></con:response><con:response name="EmptySample" id="9ab3f978-ec74-4910-a240-6b2451b4d116" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": []
+}
+</con:responseContent></con:response><con:response name="Document Holding" id="d8e98020-a26d-41d8-9649-d9885e5b8ed0" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent><![CDATA[{
+    "status": "success",
+    "data": [
+        {
+            "applicationlockid": "43F0D1E0-232D-B74E-B34E-96EAA8337403",
+            "nextaccesstime": "",
+            "connectorname": "OutputJavaConnector",
+            "externalid": "TestApp-1698-E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "storagecomponenttypeid": "",
+            "processingstate": "8",
+            "archivetransfer": "",
+            "typeid": "CEEEDC80-FA9E-40D8-BF16-A538807BBF95",
+            "id": "cXVldWU6L2VhYmIwMDNiLTYzZjUtNGE5Yi0yZDBjLWUyYTI3YWY4MGRiYzpkYTdkMjU1MS03Zjk0LTcxNGQtYTgwNi04ZDQ1NzUzYTExMzk=",
+            "complextypeid": "EABB003B-63F5-4A9B-2D0C-E2A27AF80DBC",
+            "expiringtime": "2021-03-19T20:01:55.167Z",
+            "exstrcurenginequeueinfo": "TestPDF_Primary|E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2",
+            "lastupdatetime": "2021-02-17T20:01:55.167Z",
+            "receiver": "",
+            "servicenamebase": "http://schemas.streamserve.com/uid/service/csoutconnectorinvoker/1.0",
+            "priority": "60",
+            "sequencenumber": "2",
+            "applicationdomainid": "dev",
+            "revision": "4",
+            "parentjobid": "77E76DC8-596A-5C46-B6CD-4C58A13A0E84",
+            "processingjobid": "785AF451-F143-2940-8050-0DE498B0125A",
+            "sender": "",
+            "originaltrackerid": "E4C2512F-C82F-334B-805F-B241E0B0B6F5",
+            "serviceversion": "",
+            "archivecomplextypeid": "",
+            "creationtime": "2021-02-17T20:01:54.853Z",
+            "subscriptionmanager": "0",
+            "servicecallflag": "0",
+            "archiveexpiretime": "",
+            "jobdescription": "StreamServe Communication Server:directoryscanner=WatchFolder",
+            "retryqueue": "TestAppRetry",
+            "processingsequencenumber": "1700",
+            "remainingattempts": "0",
+            "parentid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "storedvariables": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vars version=\"1.0\"><var name=\"$testqueuefilename\"><v>E:\\SW\\ManagementGateway\\16.6\\root\\applications\\TestApp\\dev\\tmp\\exstream1D3416135921139830\\PDF_PRIMARY2</v></var><var name=\"$location\"><v>invalid</v></var></vars>",
+            "processingattemptid": "2170B47A-0A4A-E94C-9051-735802EA4937",
+            "referencecount": "0",
+            "trackerid": "",
+            "sizeinbytes": "1699",
+            "contentclass": "",
+            "docinputid": "92800B19-32EA-8441-8184-51628DD83C82",
+            "tenantid": "48703CB5-89A2-5B40-967A-EE296FC92C20",
+            "delivercompressed": "",
+            "applicationid": "TestApp",
+            "contentflags": "0",
+            "queueid": "98F92F7E-BBA3-6787-241F-2D5FCFAE83F1",
+            "parentattemptid": "A82FE6F9-2248-0843-BB7B-9764DE1B2E2B",
+            "connectorid": "4D27E4AB-26A2-56B9-8573-92EC0253759F",
+            "resultval": "-2147483648",
+            "customerinrun": "2",
+            "contenttype": "application/pdf",
+            "storagesource": "",
+            "parentcomplextypeid": "E44E4D1F-14A7-0071-2397-2A60E9BDD0CF",
+            "statusmessage": "before connector-start",
+            "externalcompletionflag": "1"
+        }
+    ]
+}]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/dev/dev/v1/documents" method="PUT" resourcePath="/dev/dev/v1/documents" id="a7bc836e-bb0b-463d-b574-10390ba37017"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="71137a4b-bfba-489e-9795-1744352d7b5a" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": 1
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/dev/dev/v1/trackers" method="GET" resourcePath="/dev/dev/v1/trackers" id="172cb97c-7066-4944-801b-fc109b63909e"><con:settings/><con:defaultResponse>SampleTracker</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("success") )
+{
+    return "Success"
+}
+if( queryString.contains("error") )
+{
+    return "Error"
+}
+if( queryString.contains("inprogress") )
+{
+    return "InProgress"
+}
+
+if( queryString.contains("empty") )
+{
+    return "Empty"
+}
+
+
+/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="SampleTracker" id="1ac14a03-ac49-4532-b4e6-68a4bf654cc0" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": [
+        {
+            "containedtypes": [
+                "97B8FC5C-D9DD-4C2A-90BE-5DE28B96850B",
+                "CEEEDC80-FA9E-40D8-BF16-A538807BBF95"
+            ],
+            "expiringtime": "2021-03-19T16:45:41.980Z",
+            "lastupdatetime": "2021-02-17T16:45:41.980Z",
+            "trackerid": "33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "statusmessage": "before connector-start",
+            "resultval": "-2147483648",
+            "externalid": "TestApp-1690-33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "creationtime": "2021-02-17T16:45:41.137Z",
+            "applicationdomainid": "dev",
+            "sequencenumber": "1689",
+            "processingstate": "6"
+        }
+    ],
+    "page": {
+        "limit": 1,
+        "number": 1,
+        "totalElements": 1,
+        "totalPages": 1
+    }
+}</con:responseContent></con:response><con:response name="InProgress" id="32e6f8fa-c57c-492f-8373-887ac8eaf541" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": [
+        {
+            "containedtypes": [
+                "97B8FC5C-D9DD-4C2A-90BE-5DE28B96850B",
+                "CEEEDC80-FA9E-40D8-BF16-A538807BBF95"
+            ],
+            "expiringtime": "2021-03-19T16:45:41.980Z",
+            "lastupdatetime": "2021-02-17T16:45:41.980Z",
+            "trackerid": "33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "statusmessage": "before connector-start",
+            "resultval": "-2147483648",
+            "externalid": "TestApp-1690-33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "creationtime": "2021-02-17T16:45:41.137Z",
+            "applicationdomainid": "dev",
+            "sequencenumber": "1689",
+            "processingstate": "0"
+        }
+    ],
+    "page": {
+        "limit": 1,
+        "number": 1,
+        "totalElements": 1,
+        "totalPages": 1
+    }
+}</con:responseContent></con:response><con:response name="Error" id="c12a2fdb-e847-49ff-9c1f-8af68b5b2160" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": [
+        {
+            "containedtypes": [
+                "97B8FC5C-D9DD-4C2A-90BE-5DE28B96850B",
+                "CEEEDC80-FA9E-40D8-BF16-A538807BBF95"
+            ],
+            "expiringtime": "2021-03-19T16:45:41.980Z",
+            "lastupdatetime": "2021-02-17T16:45:41.980Z",
+            "trackerid": "33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "statusmessage": "before connector-start",
+            "resultval": "-2147483648",
+            "externalid": "TestApp-1690-33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "creationtime": "2021-02-17T16:45:41.137Z",
+            "applicationdomainid": "dev",
+            "sequencenumber": "1689",
+            "processingstate": "6"
+        }
+    ],
+    "page": {
+        "limit": 1,
+        "number": 1,
+        "totalElements": 1,
+        "totalPages": 1
+    }
+}</con:responseContent></con:response><con:response name="Success" id="42d91850-867c-46e0-bdd8-8f4aff4433fd" httpResponseStatus="200"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": [
+        {
+            "containedtypes": [
+                "97B8FC5C-D9DD-4C2A-90BE-5DE28B96850B",
+                "CEEEDC80-FA9E-40D8-BF16-A538807BBF95"
+            ],
+            "expiringtime": "2021-03-19T16:45:41.980Z",
+            "lastupdatetime": "2021-02-17T16:45:41.980Z",
+            "trackerid": "33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "statusmessage": "before connector-start",
+            "resultval": "-2147483648",
+            "externalid": "TestApp-1690-33AAAFF6-DA13-7B42-AAE4-048074BE67C5",
+            "creationtime": "2021-02-17T16:45:41.137Z",
+            "applicationdomainid": "dev",
+            "sequencenumber": "1689",
+            "processingstate": "5"
+        }
+    ],
+    "page": {
+        "limit": 1,
+        "number": 1,
+        "totalElements": 1,
+        "totalPages": 1
+    }
+}</con:responseContent></con:response><con:response name="Empty" id="66620b7f-a485-40da-800c-585a3b73dfa6" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": [],
+    "page": {
+        "limit": 0,
+        "number": 0,
+        "totalElements": 0,
+        "totalPages": 0
+    }
+}
+</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/dev/dev/v1/communications" method="POST" resourcePath="/dev/dev/v1/communications" id="a5ccacfe-43e3-4c55-ab7e-0e09e6cf87f9"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="7835395b-eaea-4dae-9d87-509708a0ce78" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "status": "success",
+    "data": {
+        "id": "F5F867B5-9D16-1243-9F46-A45647BE524F",
+        "attributeMap": {}
+    }
+}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

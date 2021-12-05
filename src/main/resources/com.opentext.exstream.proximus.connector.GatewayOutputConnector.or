@@ -1,0 +1,189 @@
+<Property title="Body paths" visible="1">
+    <Initial></Initial>
+    <ToolTip>Full paths to bodies (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Body encoding" visible="1">
+    <Initial></Initial>
+    <ToolTip>Encoding of bodies (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Body language" visible="1">
+    <Initial></Initial>
+    <ToolTip>Language of bodies (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Body UTF-16 to UTF-8" visible="1">
+    <Initial></Initial>
+    <ToolTip>Work around for Engine DBCS encoding issue</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Attachment paths" visible="1">
+    <Initial></Initial>
+    <ToolTip>Full paths to attachments (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Attachment alias" visible="1">
+    <Initial></Initial>
+    <ToolTip>Filenames as they appear in email (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Attachment encoding" visible="1">
+    <Initial></Initial>
+    <ToolTip>Encoding of attachments (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Attachment language" visible="1">
+    <Initial></Initial>
+    <ToolTip>Language of attachments (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="From" visible="1">
+    <Initial></Initial>
+    <ToolTip>Single recipient</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="From alias" visible="1">
+    <Initial></Initial>
+    <ToolTip>Single recipient</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Reply-To" visible="1">
+    <Initial></Initial>
+    <ToolTip>Single recipient</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="To" visible="1">
+    <Initial></Initial>
+    <ToolTip>Multiple recipients (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="To kind" visible="1">
+    <Initial></Initial>
+    <ToolTip>Kind of each TO recipient (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="To reference" visible="1">
+    <Initial></Initial>
+    <ToolTip>Reference of each TO recipient (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Cc" visible="1">
+    <Initial></Initial>
+    <ToolTip>Multiple recipients (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Bcc" visible="1">
+    <Initial></Initial>
+    <ToolTip>Multiple recipients (split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Subject" visible="1">
+    <Initial></Initial>
+    <ToolTip>Subject of the message</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Priority" visible="1">
+    <Initial></Initial>
+    <ToolTip>Priority applied during message delivery (if possible)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Time to live" visible="1">
+    <Initial></Initial>
+    <ToolTip>TTL in minutes (0 = no limit)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Accept reply" visible="1">
+    <Initial></Initial>
+    <ToolTip>Collect any incoming reply</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Blackout period start hour" visible="1">
+    <Initial></Initial>
+    <ToolTip>Hour when blackout period starts</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Blackout period end hour" visible="1">
+    <Initial></Initial>
+    <ToolTip>Hour when blackout period ends</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Blackout period calendar name" visible="1">
+    <Initial></Initial>
+    <ToolTip>Blackout period calendar name </ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Tracking on" visible="1">
+    <Initial></Initial>
+    <ToolTip>Track links in the message</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Monitoring on" visible="1">
+    <Initial></Initial>
+    <ToolTip>Activate and deactivate monitoring</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Tags" visible="1">
+    <Initial></Initial>
+    <ToolTip>Data fields to be used when tracking links ('key=value' pairs split by semicolon)</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>
+<Property title="Shortening on" visible="1">
+    <Initial></Initial>
+    <ToolTip>Shorten links in the message</ToolTip>
+    <Control>
+        <String/>
+    </Control>
+</Property>

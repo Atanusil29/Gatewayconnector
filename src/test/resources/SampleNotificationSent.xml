@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification>
+<UUID>a9c85b1c-75f5-4983-9cbe-138f817e7809</UUID>
+<eventTime>2021-03-23T14:59:59.307Z</eventTime>
+<workflowID>1</workflowID>
+<trackerid>1E87DB90-CC41-934C-A855-ED2713FB551C</trackerid>
+<step>SENT</step>
+<stepTime>2021-03-23T14:59:59.307Z</stepTime>
+<qualifier></qualifier>
+<channelName>EMAIL</channelName>
+<Consumer_Name>CVM</Consumer_Name>
+<event_Type>Message</event_Type>
+<squenceNumber>1</squenceNumber>
+</notification>

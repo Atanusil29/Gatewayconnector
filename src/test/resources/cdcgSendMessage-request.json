@@ -1,0 +1,51 @@
+{
+	"clientName": "string",
+	"channelName": "EMAIL|SMS|PNS|RCS",
+	"messageFile": [
+		{
+			"fileName": "string",
+			"fileCategory": "BODY|ATTACHMENT",
+			"fileFormat": "HTML|TEXT|PDF|XML|JSON",
+			"fileEncoding": "UTF-8|ISO-8859-1",
+			"fileAlias": "string",
+			"fileLanguage": "EN|FR|NL",
+			"fileContent": "YmFzZS02NCBlbmNvZGVkIHN0cmluZw=="
+		}
+	],
+	"metaData": {
+		"fromSender": "string",
+		"replyTo": "string",
+		"toRecipient": [
+			{
+				"contact": "string",
+				"isPrimary": true
+			}
+		],
+		"ccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"bccRecipient": [
+			{
+				"contact": "string"
+			}
+		],
+		"subject": "string",
+		"priority": "HIGH|LOW",
+		"timeToLive": 0,
+		"acceptReply": false,
+		"blackoutPeriod": {
+			"startHour": 0,
+			"endHour": 0
+		},
+		"trackingOn": false,
+		"tag": [
+			{
+				"name": "string",
+				"value": "string"
+			}
+		],
+		"shorteningOn": false
+	}
+}

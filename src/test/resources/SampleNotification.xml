@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification>
+<UUID>c2c6a995-3d72-4356-92e2-5be73a2cb9e2</UUID>
+<eventTime>2021-03-02T19:14:42.427Z</eventTime>
+<WorkflowStarted>No</WorkflowStarted>
+<ChannelSelected>No</ChannelSelected>
+<workflowID>c2c6a995-3d72-4356-92e2-5be73a2cb9e2</workflowID>
+<trackerid>5250AAE4-BA0A-744E-B210-2F1ABAE61B7F</trackerid>
+<step>WORKFLOW_ERROR</step>
+<stepTime>2021-03-02T20:14:42.653+0200</stepTime>
+<qualifier>(error message from cdcg)</qualifier>
+<event_Type>Workflow</event_Type>
+</notification>
