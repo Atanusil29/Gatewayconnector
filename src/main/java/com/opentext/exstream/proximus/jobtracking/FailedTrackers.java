@@ -195,7 +195,9 @@ public class FailedTrackers extends CommandBase {
 					Calendar calendar = Calendar.getInstance();
 					syncEnd = calendar.getTime();
 					calendar.add(Calendar.MINUTE, -minutes);
-					syncStart = calendar.getTime();
+					//syncStart = calendar.getTime();
+					//Added by Atanu on 03/04/2022 to fix the Orchestration issue where if a batch took for than the argumented minutes then there is a gab and double communication issue
+					syncStart = readLastExecution(LAST_EXECUTION_FILE);
 				} catch (NumberFormatException e) {
 					System.out.println("Unable to parse integer: " + args[1]);
 					throw new Exception("syncStart/syncEnd not set");
